@@ -1,0 +1,17 @@
+<h1>The magic of relations</h1>
+
+<form action="/character/add-to-episode" method="post">
+    <label for="character">Select the Character</label>
+    <select name="characterId">
+    {{#each charactersList}}
+        <option value="{{this._id}}">{{this.name}}</option>
+    {{/each}}
+    </select>
+    <label for="episode">Select the episode</label>
+    <select name="episodeId">
+    {{#each episodesList}}
+        <option value="{{this._id}}">{{this.title}}</option>
+    {{/each}}
+    </select>
+    <button type="submit">MAGIC</button>
+</form>
